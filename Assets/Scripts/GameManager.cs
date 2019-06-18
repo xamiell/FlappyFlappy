@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
 
             GameSpeed += 1.5f;
 
-            if ( ColumnGenerator.GeneratorRate > 5 )
+            if ( ColumnGenerator.GeneratorRate > 70 )
             {
                 ColumnGenerator.GeneratorRate -= 65;
             }
