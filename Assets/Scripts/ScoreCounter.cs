@@ -28,6 +28,8 @@ public class ScoreCounter : MonoBehaviour
         {
             _pointSound.Play();
             GameManager.GameScore += gameSettings.pointFactor;
+
+            GameManager.SpeedWorldOverTime( gameSettings.pointFactor );
         }
     }
 }
