@@ -12,9 +12,13 @@ public class GameManager : MonoBehaviour
     public static bool IsPlayerDeath;
     public static float GameSpeed;
 
+    private static int _tempScore;
+
     // Start is called before the first frame update
     void Start()
     {
+        _tempScore = default;
+
         IsPlayerDeath = false;
         GameSpeed = gameSettings.initialGameSpeed;
 
@@ -38,5 +42,22 @@ public class GameManager : MonoBehaviour
     {
         IsPlayerDeath = true;
         PlayerReadyDetector.IsPlayerReady = false;
+    }
+
+    public static void SpeedWorldOverTime( int score )
+    {
+        _tempScore += score;
+
+        if ( _tempScore == 50 )
+        {
+            _tempScore = default;
+
+            GameSpeed += 1.5f;
+
+            if ( ColumnGenerator.GeneratorRate > 5 )
+            {
+                ColumnGenerator.GeneratorRate -= 65;
+            }
+        }
     }
 }
