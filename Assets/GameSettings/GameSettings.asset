@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 815daee8edf0d76488b40531f6880623, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
-  initialGameSpeed: 1.36
+  initialGameSpeed: 3
   backgroundSpeed: 0.02
   pointFactor: 5
-  columnGeneratorRate: 317
+  columnGeneratorRate: 200
   timeBetewnTransitions: 3
+  gameOverMessage: OH, YOU DIE!
   jumpForce: 12.5
   gravityForce: 5
