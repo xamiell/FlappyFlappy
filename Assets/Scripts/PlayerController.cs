@@ -24,6 +24,11 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+
+        if ( PlayerReadyDetector.IsPlayerReady )
+        {
+            _playerAnimator.SetBool("IsPlayerReady", true);
+        }
     }
 
     private void Jump()
